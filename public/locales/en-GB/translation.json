@@ -1,0 +1,11 @@
+{
+  "hero": {
+    "based": "Based in Norway"
+  },
+  "nav": {
+    "home": "Home",
+    "work": "Work",
+    "about": "About",
+    "contact": "Contact"
+  }
+}
