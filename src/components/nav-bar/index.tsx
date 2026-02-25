@@ -1,15 +1,15 @@
 import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { useEffect, useState } from "react";
 
-import type { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import cx from "classnames";
 import { useTranslation } from "react-i18next";
+import type { LucideIcon } from "lucide-react";
 
 interface NavItem {
   name: string;
   link: string;
-  icon?: IconDefinition;
+  icon?: LucideIcon;
 }
 
 export function NavBar({ navItems, className }: { navItems: NavItem[]; className?: string }) {
@@ -57,16 +57,19 @@ export function NavBar({ navItems, className }: { navItems: NavItem[]; className
           className
         )}
       >
-        {navItems.map((item: NavItem, idx: number) => (
-          <a
-            key={idx}
-            href={item.link}
-            className="relative text-neutral-50 items-center flex space-x-1 hover:text-neutral-300"
-          >
-            <FontAwesomeIcon className="block sm:hidden" icon={item.icon!} />
-            <span className="hidden sm:block font-medium">{item.name}</span>
-          </a>
-        ))}
+        {navItems.map((item: NavItem, idx: number) => {
+          const Icon = item.icon;
+          return (
+            <a
+              key={idx}
+              href={item.link}
+              className="relative text-neutral-50 items-center flex space-x-1 hover:text-neutral-300"
+            >
+              {Icon && <Icon size={18} strokeWidth={2.5} />}
+              <span className="hidden sm:block font-medium">{item.name}</span>
+            </a>
+          );
+        })}
         {/*<span>*/}
         {/*  <button*/}
         {/*    type="button"*/}

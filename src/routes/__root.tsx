@@ -1,7 +1,7 @@
-import { faBriefcase, faEnvelope, faHouse, faUser } from "@fortawesome/free-solid-svg-icons";
 import { Outlet, createRootRoute } from "@tanstack/react-router";
 import { NavBar } from "../components/nav-bar";
 import { useTranslation } from "react-i18next";
+import { Briefcase, House, User, Mail } from "lucide-react";
 
 export const Route = createRootRoute({
   component: RootLayout,
@@ -11,10 +11,10 @@ function RootLayout() {
   const { t } = useTranslation();
 
   const navItems = [
-    { name: t("nav.home"), link: "#home", icon: faHouse },
-    { name: t("nav.about"), link: "#about", icon: faUser },
-    { name: t("nav.work"), link: "#work", icon: faBriefcase },
-    { name: t("nav.contact"), link: "#contact", icon: faEnvelope },
+    { name: t("nav.home"), link: "#home", icon: House },
+    { name: t("nav.about"), link: "#about", icon: User },
+    { name: t("nav.work"), link: "#work", icon: Briefcase },
+    { name: t("nav.contact"), link: "#contact", icon: Mail },
   ];
 
   return (
