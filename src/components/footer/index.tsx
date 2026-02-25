@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Button } from "../ui/button";
 import { BackgroundBeams } from "../beams";
+import { socialLinks } from "../../utils/consts";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -32,6 +33,23 @@ export function Footer() {
             <p className="text-dark-200/70 dark:text-stone-200/70 relative z-10">
               &copy; {currentYear} | All rights reserved.
             </p>
+          </div>
+          <div className="flex justify-between gap-0 sm:gap-16">
+            <ul className="space-y-2.5 relative z-10 text-sm sm:text-base">
+              <li className="text-lg font-semibold">Socials</li>
+              {socialLinks.map((link) => (
+                <li key={link.label}>
+                  <a
+                    href={link.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-dark-200/70 dark:text-stone-200/70 hover:text-primary transition-colors duration-200"
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>

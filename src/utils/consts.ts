@@ -54,32 +54,34 @@ export const portfolioProjects = [
     id: "agencyspeedindex",
     heading: "Agency Speed Index",
     subheading: "A modern performance website",
-    description: "A SaaS platform monitoring Core Web Vitals for digital agencies. Automated performance tracking using Google Lightouse API",
+    description:
+      "A SaaS platform monitoring Core Web Vitals for digital agencies. Automated performance tracking using Google Lightouse API",
     imageUrl: "/img/projects/agencyspeedindex.png",
     status: "Live Beta",
-    techStack: [
-        "NextJS",
-        "TypeScript",
-        "Supabase",
-        "Tailwind CSS"
-    ],
+    techStack: ["NextJS", "TypeScript", "Supabase", "Tailwind CSS"],
     liveDemoUrl: "https://agencyspeedindex.com",
-    githubUrl: ""
+    githubUrl: "",
   },
   {
     id: "netflix-semantic-search",
     heading: "Netflix Semantic Search",
     subheading: "AI-powered search engine",
-    description: "A semantic search engine for Netflix content using OpenAI embeddings and Pinecone vector database for enhanced search relevance.",
+    description:
+      "A semantic search engine for Netflix content using OpenAI embeddings and Pinecone vector database for enhanced search relevance.",
     status: "Offline",
-    techStack: [
-        "NextJS",
-        "TypeScript",
-        "OpenAI API",
-        "Pinecone",
-        "Tailwind CSS"
-    ],
+    techStack: ["NextJS", "TypeScript", "OpenAI API", "Pinecone", "Tailwind CSS"],
     liveDemoUrl: "",
-    githubUrl: ""
-  }
-]
+    githubUrl: "",
+  },
+];
+
+export const socialLinks = [
+  {
+    url: "https://www.linkedin.com/in/martin-hellebostad-andresen-547193192/",
+    label: "LinkedIn",
+  },
+  {
+    url: "https://github.com/mhandresen",
+    label: "GitHub",
+  },
+];
