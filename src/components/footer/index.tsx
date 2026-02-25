@@ -19,10 +19,10 @@ export function Footer() {
               className="text-primary hover:text-primary/80 border-b-2 border-primary hover:border-primary/80 transition-colors duration-200"
             >
               via email
-            </Link>
-            {" "}to collaborate!
+            </Link>{" "}
+            to collaborate!
           </h1>
-          <Button shine>
+          <Button>
             <Link to="mailto:martin.hellebostad.andresen@gmail.com">Contact me</Link>
           </Button>
         </div>
