@@ -1,7 +1,5 @@
 import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { useEffect, useState } from "react";
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import cx from "classnames";
 import { useTranslation } from "react-i18next";
 import type { LucideIcon } from "lucide-react";
